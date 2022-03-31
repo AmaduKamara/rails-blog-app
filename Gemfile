@@ -46,13 +46,28 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+gem 'sass-rails', '~> 6.0'
+
+# BulmanCSS gem for frontend styling. A modern CSS framework based on Flexbox
+gem 'bulma-rails', '~> 0.9.3'
+
+# Simple form for form creation. Forms made easy!
+gem 'simple_form', '~> 5.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.18'
+  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  # Provides a better error page for Rails and other Rack apps. Includes source code inspection, a live REPL and local/instance variable inspection for all stack frames.
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
 group :development do
