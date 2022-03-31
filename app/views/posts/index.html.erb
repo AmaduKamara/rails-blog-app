@@ -1,1 +1,24 @@
 <h1 class="title">Blog Post Page</h1>
+
+<section class="section">
+  <div class="container">
+    <ul>
+      <% @posts.each do |post| %>
+        <li class="box card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <h2 class="title is-4"><%= post.title %></h2>
+              </div>
+            </div>
+            <div class="content">
+              <p><%= post.content %></p>
+            </div>
+            <div class="comment-count">
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
